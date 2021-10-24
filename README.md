@@ -44,6 +44,50 @@ Ref: [Documentation](https://discordjs.guide/preparations/setting-up-a-bot-appli
 ## Creating the Project Directory
 You can either fork this repo and `git clone` your forked repo into your system, or create your own directory.
 
+## Initializing Project
+Go into the terminal and type 
+
+```npm init -y```
+
+This command creates a package.json file. In this file we can modify our scripts in order to run the bot. I recommend the following script:
+
+```
+"start": "node src/index.js",
+```
+
+By typing ```yarn start``` into the terminal, yarn will execute the command "start" in shell of cmd.exe depending on your OS.
+
+Next, we'll install two of my favorite packages, nodemon and prettier
+
+```
+yarn add prettier nodemon
+```
+
+Then, we need to add a few scripts to accomodate these packages. In package.json replace scripts with the following (or add to what's already written):
+
+```
+"scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "format": "prettier --write \"src/**/*.js\""
+  },
+```
+
+Create a file in the root directory called ".prettierrc" and put this in the file (yes, it really is just empty brackets): 
+
+```
+{}
+```
+
+Prettier formats code for you so you don't have to worry about making your code aesthetic. nodemon runs code whenever you save a file.
+
+Lastly, add the most important package for this project: 
+
+```
+yarn add discord.js
+```
+
+
 ## Protecting Tokens
 Hopefully, you still have your token copied into your system. If not, go back to the Discord Dev Portal and copy your token. In a terminal change directories to your project directory. Create a `.gitignore` file and copy and paste this [code](https://github.com/github/gitignore/blob/master/Node.gitignore) into the file. This will ensure that your files are safe. 
 
@@ -59,8 +103,10 @@ for example:
 
 ```DISCORD_TOKEN=ODk5MTMyOTMxOTc5NzM5MTY4.YWuUzA.2nkw4e4v9n7l0kog9QgcFOTlLKM```
 
+
+
 ## What's Next?
 This workshop covered only 2 concepts. 
 1. You can expand you discord bot by adding a database. I personally recommend Mongoose/MongoDB Atlas or Firebase. 
 2. Upgrade your Node version and add the ability to play sound in voice channels [Discord Voice Documentation](https://discordjs.guide/voice/#installation)
-3. Discover new APIs and use them in tandem with DiscordJS.
+3. Discover new APIs and use them in tandem with DiscordJS. I've made League of Legends bots and kanye west bots. There are so many apis you can use like reddit or twitter apis.
