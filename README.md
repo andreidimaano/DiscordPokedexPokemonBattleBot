@@ -14,32 +14,58 @@ Welcome to Cutie Hack 2021. Thank you for coming to my workshop for UCR's Cutie 
 
 In the spirit of togetherness (Cutie Hack's theme), we will be creating a pokedex discord bot. This is a beginner's project that will combine integral programming concepts:
 
-1. Use a rest API to get data
+1. Use a REST API to get data
 2. Use documentation to solve problems
+3. Create our own REST API
 
 ## Installation
 ![NodeJS Image](https://d1q6f0aelx0por.cloudfront.net/product-logos/library-node-logo.png)
+![](https://www.python.org/static/img/python-logo@2x.png)
 
-This workshop uses NodeJS.
+This workshop uses NodeJS and Python.
 
-You can install NodeJS however you want to - Docker, Package Manager (homebrew on mac), or download and install the binary.
+You can install NodeJS and Python however you want to - Docker, Package Manager (homebrew on mac), or download and install the binary.
 
 > [Node JS Binary](https://nodejs.org/en/) 
 > 
 > I recommend using the LTS version (on the left)
+>
+> [Python Binary](https://www.python.org/downloads/)
 
 I also like using yarn over npm as a package manager :). Once you have NodeJS installed run the following command in terminal
 
 > ```npm install --global yarn```
+
+## Introduction
+
+> *I included this section for people that need to download everything :D*
+
+My name is Andrei Dimaano. I am a third year CS Major at UC Riverside. I previously interned at MathWorks working with data visualizations in React (fun fact, I have not used MATLAB to this day). 
+
+Most of my programming experience lies in web technologies. However, I have done game dev, mobile dev, and ML. 
+
+Other than programming, I really like korean culture. My friends call me a koreaboo, and it's partly true. If you can guess my favorite KPOP artist, you get brownie points :^). I also do a lot of weightlifting at the SRC. Recently, I have been getting into cooking.
+
+> So Andrei, why are you the Discord workshop lead?
+>
+> > Good Question! I honestly haven't made the most technologically complex discord bot, but I have made a discord bot that many people use. I'm the creator of Calcifer, a productivity discord bot used in `1078` servers and `1957` users. 
+>
+> Why JS? why not python?
+> 
+> >I like JS because I'm a web dev. Also, the DiscordJS library is used more than the Python library. The DiscordJS library also has 100% coverage of the Discord API :) I'm no expert in programming languages but if you take CS181 you'll probably find a better answer.
+
 
 ## Register your bot with Discord
 Ref: [Documentation](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
 1. Open [Discord Dev Portal](https://discord.com/developers/applications)
 2. Click on the "New Application" button.
 3. Enter a name and confirm the pop-up window by clicking the "Create" button.
+![New Discord App image](https://discordjs.guide/assets/create-app.ed82aede.png)
 4. Go to "Bot" on the left pane and click "Add Bot"
+![Adding bot image](https://discordjs.guide/assets/create-bot.44c7ea49.png)
 5. Hit the "Copy" button to get you token
 6. Go to OAuth2 on the left and create your URL by selecting `bot` and `applications.commands`. Hit "Copy" and enter the link in a browser. Follow the instructions to add a bot to your server.
+
 
 ## Creating the Project Directory
 You can either fork this repo and `git clone` your forked repo into your system, or create your own directory.
