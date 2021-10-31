@@ -40,9 +40,7 @@ def get_img():
 
     # pokemon 1
     apiResponse = requests.get(f'https://pokeapi.co/api/v2/pokemon/{pokemon1}/')
-    pokemon1ID = apiResponse.json().get('id')
-    response = requests.get(f'https://raw.githubusercotent.com/PokeAPI/sprites/master/sprites/pokemon/back/{pokemon1ID}.png')
-    # response = requests.get(apiResponse.json().get('sprites').get('back_default'))
+    response = requests.get(apiResponse.json().get('sprites').get('back_default'))
     img = Image.open(BytesIO(response.content))
     size = 350,350
     img = img.resize(size, Image.ANTIALIAS)
@@ -53,10 +51,8 @@ def get_img():
 
     # pokemon 2
     
-    apiResponse = requests.get(f'https://pokeapi.co/api/v2/pokemon/{pokemon1}/')
-    pokemon2ID = apiResponse.json().get('id')
-    # response = requests.get(apiResponse.json().get('sprites').get('front_default'))
-    response = requests.get(f'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{pokemon2ID}.png')
+    apiResponse = requests.get(f'https://pokeapi.co/api/v2/pokemon/{pokemon2}/')
+    response = requests.get(apiResponse.json().get('sprites').get('front_default'))
     img = Image.open(BytesIO(response.content))
     size = 150,150
     img = img.resize(size, Image.ANTIALIAS)
