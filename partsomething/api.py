@@ -33,7 +33,9 @@ def get_img():
 
     # bottom right HP BAR
     draw.rectangle((bgIM.size[0] - 152, bgIM.size[1] - 32, bgIM.size[0] - 18 , bgIM.size[1] - 18), fill="black")
-    draw.rectangle((bgIM.size[0] - (150 * (int(rem2) / 100)), bgIM.size[1] - 30, bgIM.size[0] - 20 , bgIM.size[1] - 20), fill="green")
+    print("width", bgIM.size[0] - 22 + (152 * (int(rem2) / 100)))
+    print("width2:", bgIM.size[0]- 22)
+    draw.rectangle((bgIM.size[0] - 22 - (152 * (int(rem2) / 100)), bgIM.size[1] - 30,  bgIM.size[0]- 22, bgIM.size[1] - 20), fill="green")
 
     # pokemon 1
     response = requests.get(f'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/{pokemon1}.png')

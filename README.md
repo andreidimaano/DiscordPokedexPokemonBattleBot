@@ -163,8 +163,44 @@ What is ```() => {} ```?
 
 ## Part 2: Commands
 
-1. run this command in terminal: `yarn add @discordjs/builders @discordjs/rest discord-api-types`
-2. 
+Let's make our first command
+1. Locate messageCreate [here](https://discord.js.org/#/docs/main/stable/class/Client). messageCreate is under the events category so we need to prepend our function with 'on'.
+2. Type this below the login and ready functions:
+``` client.on("messageCreate", async (message) => {})```. This function is known as an event listener. Whenever a message is sent, this function is called.
+3. Now, send a message in discord and log the message in terminal ```console.log(message)```
+4. use the documentation to figure out how to reply :D [documentation](https://discord.js.org/#/docs/main/stable/class/Message?scrollTo=reply)
+
+We're going to register our commands on discord
+
+- [Slash Command Guide](https://discordjs.guide/interactions/registering-slash-commands.html#guild-commands)
+
+1. Create a file in src called `register.js` and copy the code in the Part 2 starter folder
+2. Create a director in src called `commands` and add a file called `table.js`. Here, we'll be making our first slash command.
+3. In this file create an export. we'll be exporting an object with our SlashCommand and its execution. In JS, we use ```module.exports = { // obect here }``` to export something.
+Our object should include a data field and an execute field.
+4. For the execute function, given an `interaction` as input, reply to the interaction with an embed that includes a gif and says "Oh no, our table. It's broken :(".
+5. For the data field, follow this documentation to create a slash command. [Documentation](https://discordjs.guide/creating-your-bot/command-handling.html#individual-command-files)   
+
+We'll be registering our commands with the discord database soon. Now, we need our client(bot) to have access to the commands.
+1. Create a setCommands function above the main() definition
+2. Import Collection from discord.js and fs from "fs"
+3. Given `client` as an input, the set commands function needs to create a new collection and assign it to the commands field of `client`. Then, it needs to find all js files from commandFiles and add it to the commands. 
+
+Now, we need our bot to reply to an interaction. This is how we reply to slash commands.
+1. Create an event listener for interactions
+2. use the documentation or console log interaction
+3. only reply to the interaction is it's a command
+4. use your commands collection to find the command
+5. if the command doesn't exist do nothing
+6. otherwise execute
+
+Finally, we need to run ```node src/register.js``` in terminal to register our commands. Make sure the .env variables are correct.
+
+> Congrats! You've officially made a discord bot. This is the basics to using a discord bot. They're super simple to make. Feel free to stick around for the next portion where we'll be building a simple pokedex. 
+
+## Pokedex
+1. Create a new command for looking up a pokemon
+2. Use the options property to specify we need a string from the user.
 
 ## What's Next?
 This workshop covered only 2 concepts. 

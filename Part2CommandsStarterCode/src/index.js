@@ -1,6 +1,10 @@
 require("dotenv").config();
 const { Client, Intents } = require("discord.js");
 
+let setCommands = (client) => {
+  // code here
+}
+
 const main = async () => {
   const client = new Client({
     intents: [
@@ -20,26 +24,36 @@ const main = async () => {
   client.once('ready', async () => {
     console.log("ready")
   });
+  
+  // message event listener
+  client.on("messageCreate", async (message) => {
+    /* 
+      1. console log the message to find out what it is
+      2. reply to the command if it says cutie
+      3. create your own command
+      
+      For Example:
+      if command == 'Discrete Math'
+        reply sad emoji (btw bots can access emojis!)
 
-  /*
+      if command == 'pickles'
+        reply do not belong on burgers
 
-    Replying to commands
+      if command == 'amogus'
+        reply sus
+    */
+  })
 
-    1. look at the documentation to find out how to reply to commands
-    2. instead of ping and pong, create your own command
-    
-    For Example:
-    if command == 'Discrete Math'
-      reply sad emoji (btw bots can access emojis!)
-
-    if command == 'pickles'
-      reply do not belong on burgers
-
-    if command == 'amogus'
-      reply sus
-
-    make sure you change the commands array in src/register.js accordingly
-  */
+  // interaction event listener
+  client.on('interactionCreate', async interaction => {
+    /*
+      1. use the documentation or console log interaction
+      2. only reply to the interaction is it's a command
+      3. use your commands collection to find the command
+      4. if the command doesn't exist do nothing
+      5. otherwise execute
+    */
+  });
 }
 
 
