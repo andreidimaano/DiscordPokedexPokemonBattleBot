@@ -129,10 +129,45 @@ for example:
 
 ```DISCORD_TOKEN=ODk5MTMyOTMxOTc5NzM5MTY4.YWuUzA.2nkw4e4v9n7l0kog9QgcFOTlLKM```
 
+## Part 1: Initial Files
 
+1. Create an `src/index.js` file.
+2. Create an asynchronous main function in the file
+3. in this function, we need to initialize the bot and login the bot to discord. Use the documentation to find the code for this. [Intial Code Documentation](https://discordjs.guide/creating-your-bot/#creating-the-main-file). When looking at documentation, don't copy and paste the whole code. Copy and paste in sections because you may not need something in the code.
+4. Call the function at the bottom of the file
+
+JavaScript concepts from this documentation:
+1. [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 
+   
+   ```const { Client, Intents } = require('discord.js');```
+   
+   What is { Client, Intents }?
+2. [Function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
+```client.once('ready',() => { ```
+
+```// code here ```
+
+```});```
+
+What is ```() => {} ```?
+
+3. [Async/Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) What is async?
+
+
+
+> Extra Credit:
+> Can you use the documentation to set the status of the bot? 
+> [Hint](https://discord.js.org/#/docs/main/stable/class/ClientUser?scrollTo=setStatus)
+
+
+## Part 2: Commands
+
+1. run this command in terminal: `yarn add @discordjs/builders @discordjs/rest discord-api-types`
+2. 
 
 ## What's Next?
 This workshop covered only 2 concepts. 
 1. You can expand you discord bot by adding a database. I personally recommend Mongoose/MongoDB Atlas or Firebase. 
-2. Upgrade your Node version and add the ability to play sound in voice channels [Discord Voice Documentation](https://discordjs.guide/voice/#installation)
+2. add the ability to play sound in voice channels [Discord Voice Documentation](https://discordjs.guide/voice/#installation)
 3. Discover new APIs and use them in tandem with DiscordJS. I've made League of Legends bots and kanye west bots. There are so many apis you can use like reddit or twitter apis.

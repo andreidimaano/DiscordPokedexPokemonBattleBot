@@ -1,0 +1,28 @@
+{
+  "name": "discordbotguide",
+  "version": "1.0.0",
+  "description": "Welcome to Cutie Hack 2021. Thank you for coming to my workshop for UCR's Cutie Hack 2021.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "format": "prettier --write \"src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreidimaano/DiscordBotGuide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreidimaano/DiscordBotGuide/issues"
+  },
+  "homepage": "https://github.com/andreidimaano/DiscordBotGuide#readme",
+  "dependencies": {
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1"
+  }
+}
