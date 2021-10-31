@@ -37,12 +37,13 @@ const main = async () => {
   });
 
   client.on('messageCreate', async (message) => {
-    console.log(message);
+    // console.log(message);
 
     if(message.author.bot) return;
 
     if(message.content.toLowerCase() == "cutie") {
       await message.reply("yes, andrei is indeed a cutie :^)");
+      // console.log(message.guildId)
     }
       
     if(message.content.toLowerCase() == 'discrete math')

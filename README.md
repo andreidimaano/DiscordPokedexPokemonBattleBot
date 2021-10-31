@@ -199,8 +199,40 @@ Finally, we need to run ```node src/register.js``` in terminal to register our c
 > Congrats! You've officially made a discord bot. This is the basics to using a discord bot. They're super simple to make. Feel free to stick around for the next portion where we'll be building a simple pokedex. 
 
 ## Pokedex
+
+Command Setup:
 1. Create a new command for looking up a pokemon
 2. Use the options property to specify we need a string from the user.
+
+Execute Command:
+1. Run ```yarn add axios``` in terminal [Axios](https://www.npmjs.com/package/axios) is a library for making REST API requests. A [REST API](https://www.ibm.com/cloud/learn/rest-apis) is an http interface for your code. It allows your code to connect to the internet and communicate with other applications. Typically, you use them to get data from a database.
+2. Use axios to get information from this api endpoint "https://pokeapi.co/api/v2/pokemon/{id or name}/"
+3. Hard code a pokemon string for now and either use your browser to see the information or use console.log
+4. Parse through the data and figure out what information you need
+5. Display stats, an image, and the name on the embed
+
+## Pokemon Battle - Creating your own REST API
+
+Oftentimes, we don't have the API we need. Usually, this means we need to create the api ourselves. We'll be using python for this next part. We'll be creating an API that takes 2 pokemon names and their HP percentages. The API uses this input to create a pokemon battle image. Then, the API will save the image into a directory. Since it lies within the same project directory, we can use that image in a discord embed.
+
+There are 4 main operations in an API: Create, Read, Update, and Destroy. Our API only needs to create an image
+
+```pip3 install flask pillow requests io```
+
+Steps:
+1. Create a new flask app, use the documentation to get started
+2. Create a get route that creates a pokemon battle image
+3. use Image to open the pokemon background asset 
+4. get the arguments and assign them to variables
+5. draw HP bars on the image
+6. get the first pokemon and paste it onto the image
+7. get the second pokemon and paste it onto the image
+8. save the image
+9. return the image
+
+In the starter files, I have code that tells you what I searched and the links I found. When you're programming something, and you're unfamiliar with the technology, you need to Google. Googling is a skill to learn. It's something you develop overtime as you get more knowledge of software engineering.
+
+To finish the project, add a command that requires 4 options: pokemon1 name, pokemon2 name, pokemon1 HP pokemon2 HP. Run your flask app and make a get request using axios.
 
 ## What's Next?
 This workshop covered only 2 concepts. 
