@@ -18,6 +18,9 @@ In the spirit of togetherness (Cutie Hack's theme), we will be creating a pokede
 2. Use documentation to solve problems
 3. Create our own REST API
 
+![Pokedex](https://twinfinite.net/wp-content/uploads/2021/08/pokedex-switch.jpg)
+![Pokemon Battle](https://static.wikia.nocookie.net/essentialsdocs/images/7/70/Battle.png/revision/latest?cb=20190219202514)
+
 ## Installation
 ![NodeJS Image](https://d1q6f0aelx0por.cloudfront.net/product-logos/library-node-logo.png)
 ![](https://www.python.org/static/img/python-logo@2x.png)
