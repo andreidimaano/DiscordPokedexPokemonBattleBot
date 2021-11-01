@@ -78,6 +78,10 @@ Go into the terminal and type
 
 ```npm init -y```
 
+And, if you have not already,
+
+```npm install --global yarn```
+
 This command creates a package.json file. In this file we can modify our scripts in order to run the bot. I recommend the following script:
 
 ```
@@ -91,6 +95,9 @@ Next, we'll install two of my favorite packages, nodemon and prettier
 ```
 yarn add prettier nodemon
 ```
+
+[prettier ref](https://prettier.io/docs/en/configuration.html)
+[nodemon ref](https://www.npmjs.com/package/nodemon)
 
 Then, we need to add a few scripts to accomodate these packages. In package.json replace scripts with the following (or add to what's already written):
 
@@ -116,9 +123,8 @@ Lastly, add the most important package for this project:
 yarn add discord.js
 ```
 
-
 ## Protecting Tokens
-Hopefully, you still have your token copied into your system. If not, go back to the Discord Dev Portal and copy your token. In a terminal change directories to your project directory. Create a `.gitignore` file and copy and paste this [code](https://github.com/github/gitignore/blob/master/Node.gitignore) into the file. This will ensure that your files are safe. 
+Hopefully, you still have your token copied into your system. If not, go back to the Discord Dev Portal and copy your token. In a terminal change directories to your project directory. This will ensure that your files are safe. Create a `.gitignore` file and copy and paste this [code](https://github.com/github/gitignore/blob/master/Node.gitignore) into the file. 
 
 Next, run this command in your terminal:
 
@@ -126,11 +132,11 @@ Next, run this command in your terminal:
 
 Then, create a file in the project root directory called `.env`. Then write the following code:
 
-```DISCORD_TOKEN=[YOUR TOKEN]```
+```DISCORDTOKEN=[YOUR TOKEN]```
 
 for example:
 
-```DISCORD_TOKEN=ODk5MTMyOTMxOTc5NzM5MTY4.YWuUzA.2nkw4e4v9n7l0kog9QgcFOTlLKM```
+```DISCORDTOKEN=ODk5MTMyOTMxOTc5NzM5MTY4.YWuUzA.2nkw4e4v9n7l0kog9QgcFOTlLKM```
 
 ## Part 1: Initial Files
 
