@@ -179,6 +179,12 @@ Let's make our first command
 3. Now, send a message in discord and log the message in terminal ```console.log(message)```
 4. use the documentation to figure out how to reply :D [documentation](https://discord.js.org/#/docs/main/stable/class/Message?scrollTo=reply)
 
+We're going to create slash commands. We also want to create an efficient process for executing commands. This is know as the command design pattern. Read more [here](https://refactoring.guru/design-patterns/command) Our goals are:
+1. Register Commands with discord
+2. Create a slash command
+3. Add commands to our bot object
+4. Listen for Interactions in discord channels (slash commands are considered an interaction)
+
 We're going to register our commands on discord
 
 - [Slash Command Guide](https://discordjs.guide/interactions/registering-slash-commands.html#guild-commands)
@@ -194,11 +200,12 @@ We'll be registering our commands with the discord database soon. Now, we need o
 1. Create a setCommands function above the main() definition
 2. Import Collection from discord.js and fs from "fs"
 3. Given `client` as an input, the set commands function needs to create a new collection and assign it to the commands field of `client`. Then, it needs to find all js files from commandFiles and add it to the commands. 
+4. Use this as [ref](https://discordjs.guide/interactions/registering-slash-commands.html#guild-commands)
 
 Now, we need our bot to reply to an interaction. This is how we reply to slash commands.
 1. Create an event listener for interactions
 2. use the documentation or console log interaction
-3. only reply to the interaction is it's a command
+3. only reply to the interaction if it's a command
 4. use your commands collection to find the command
 5. if the command doesn't exist do nothing
 6. otherwise execute
