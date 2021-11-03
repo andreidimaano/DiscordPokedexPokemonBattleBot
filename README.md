@@ -18,6 +18,9 @@ In the spirit of togetherness (Cutie Hack's theme), we will be creating a pokede
 2. Use documentation to solve problems
 3. Create our own REST API
 
+![Pokedex](https://twinfinite.net/wp-content/uploads/2021/08/pokedex-switch.jpg)
+![Pokemon Battle](https://static.wikia.nocookie.net/essentialsdocs/images/7/70/Battle.png/revision/latest?cb=20190219202514)
+
 ## Installation
 ![NodeJS Image](https://d1q6f0aelx0por.cloudfront.net/product-logos/library-node-logo.png)
 ![](https://www.python.org/static/img/python-logo@2x.png)
@@ -75,6 +78,10 @@ Go into the terminal and type
 
 ```npm init -y```
 
+And, if you have not already,
+
+```npm install --global yarn```
+
 This command creates a package.json file. In this file we can modify our scripts in order to run the bot. I recommend the following script:
 
 ```
@@ -88,6 +95,9 @@ Next, we'll install two of my favorite packages, nodemon and prettier
 ```
 yarn add prettier nodemon
 ```
+
+[prettier ref](https://prettier.io/docs/en/configuration.html)
+[nodemon ref](https://www.npmjs.com/package/nodemon)
 
 Then, we need to add a few scripts to accomodate these packages. In package.json replace scripts with the following (or add to what's already written):
 
@@ -113,9 +123,8 @@ Lastly, add the most important package for this project:
 yarn add discord.js
 ```
 
-
 ## Protecting Tokens
-Hopefully, you still have your token copied into your system. If not, go back to the Discord Dev Portal and copy your token. In a terminal change directories to your project directory. Create a `.gitignore` file and copy and paste this [code](https://github.com/github/gitignore/blob/master/Node.gitignore) into the file. This will ensure that your files are safe. 
+Hopefully, you still have your token copied into your system. If not, go back to the Discord Dev Portal and copy your token. In a terminal change directories to your project directory. This will ensure that your files are safe. Create a `.gitignore` file and copy and paste this [code](https://github.com/github/gitignore/blob/master/Node.gitignore) into the file. 
 
 Next, run this command in your terminal:
 
@@ -123,11 +132,11 @@ Next, run this command in your terminal:
 
 Then, create a file in the project root directory called `.env`. Then write the following code:
 
-```DISCORD_TOKEN=[YOUR TOKEN]```
+```DISCORDTOKEN=[YOUR TOKEN]```
 
 for example:
 
-```DISCORD_TOKEN=ODk5MTMyOTMxOTc5NzM5MTY4.YWuUzA.2nkw4e4v9n7l0kog9QgcFOTlLKM```
+```DISCORDTOKEN=ODk5MTMyOTMxOTc5NzM5MTY4.YWuUzA.2nkw4e4v9n7l0kog9QgcFOTlLKM```
 
 ## Part 1: Initial Files
 
@@ -170,6 +179,12 @@ Let's make our first command
 3. Now, send a message in discord and log the message in terminal ```console.log(message)```
 4. use the documentation to figure out how to reply :D [documentation](https://discord.js.org/#/docs/main/stable/class/Message?scrollTo=reply)
 
+We're going to create slash commands. We also want to create an efficient process for executing commands. This is know as the command design pattern. Read more [here](https://refactoring.guru/design-patterns/command) Our goals are:
+1. Register Commands with discord
+2. Create a slash command
+3. Add commands to our bot object
+4. Listen for Interactions in discord channels (slash commands are considered an interaction)
+
 We're going to register our commands on discord
 
 - [Slash Command Guide](https://discordjs.guide/interactions/registering-slash-commands.html#guild-commands)
@@ -185,11 +200,12 @@ We'll be registering our commands with the discord database soon. Now, we need o
 1. Create a setCommands function above the main() definition
 2. Import Collection from discord.js and fs from "fs"
 3. Given `client` as an input, the set commands function needs to create a new collection and assign it to the commands field of `client`. Then, it needs to find all js files from commandFiles and add it to the commands. 
+4. Use this as [ref](https://discordjs.guide/interactions/registering-slash-commands.html#guild-commands)
 
 Now, we need our bot to reply to an interaction. This is how we reply to slash commands.
 1. Create an event listener for interactions
 2. use the documentation or console log interaction
-3. only reply to the interaction is it's a command
+3. only reply to the interaction if it's a command
 4. use your commands collection to find the command
 5. if the command doesn't exist do nothing
 6. otherwise execute
