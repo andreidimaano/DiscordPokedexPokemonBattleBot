@@ -8,11 +8,6 @@ let execute = async (interaction) => {
 
     // 2. use the pokedex api to get information about a pokemon
     let pokemonData = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name}/`)
-
-    await axios.get('http://127.0.0.1:5000/battleimg?pokemon1=92&pokemon2=12&rem1=10&rem2=100')
-    const file = new MessageAttachment('./../partsomething/newim.png');
-    
-
     if(!pokemonData) await interaction.reply("Pokemon not found")
     
     // 3. console log the data you receive
@@ -34,17 +29,16 @@ let execute = async (interaction) => {
         embeds: [
           {
             title: `${pokemonData.data.name}`,
-            thumbnail: {
+            image: {
               url: pokemonData.data.sprites["front_default"],
             },
-            image: {
-                url: 'attachment://newim.png'
+            thumbnail: {
+              url: pokemonData.data.sprites["back_default"],
             },
             color: "RANDOM",
             fields : stats
           },
         ],
-        files:[file],
         ephemeral: false
     });
 }

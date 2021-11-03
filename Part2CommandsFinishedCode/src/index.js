@@ -57,7 +57,7 @@ const main = async () => {
     // 1. use the documentation or console log interaction
     console.log(interaction)
 
-    // 2. only reply to the interaction is it's a command
+    // 2. only reply to the interaction if it's a command
     if(!interaction.isCommand()) return;
 
     // 3. use your commands collection to find the command

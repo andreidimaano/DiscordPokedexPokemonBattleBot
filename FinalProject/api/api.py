@@ -33,8 +33,12 @@ def get_img():
     draw.rectangle(hpBarCoordinates, fill="green")
 
     # bottom right HP BAR
-    outlineCoordinates = (bgIM.size[0] - 22 - 152, bgIM.size[1] - 32, bgIM.size[0] - 18 , bgIM.size[1] - 18)
-    hpBarCoordinates = (bgIM.size[0] - 20 - (152 * (int(rem2) / 100)), bgIM.size[1] - 30,  bgIM.size[0]- 20, bgIM.size[1] - 20)
+    outlineCoordinates = (bgIM.size[0] - 8 - 152, bgIM.size[1] - 32, bgIM.size[0] - 8 , bgIM.size[1] - 18)
+    hpBarCoordinates = (bgIM.size[0] - (150 * (int(rem2) / 100)), bgIM.size[1] - 30,  bgIM.size[0]- 10, bgIM.size[1] - 20)
+    print("left", 10)
+    print("right", 150 * (int(rem1) / 100))
+    print("left", bgIM.size[0] - 10 - (150 * (int(rem2) / 100)))
+    print("right", bgIM.size[0]- 10)
     draw.rectangle(outlineCoordinates, fill="black")
     draw.rectangle(hpBarCoordinates, fill="green")
 
