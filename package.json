@@ -1,7 +1,11 @@
 {
+  "scripts": {
+    "format": "prettier --write \"./**/*.js\""
+  },
   "dependencies": {
     "@discordjs/builders": "^0.8.2",
     "@discordjs/rest": "^0.1.0-canary.0",
-    "discord-api-types": "^0.24.0"
+    "discord-api-types": "^0.24.0",
+    "prettier": "^2.4.1"
   }
 }

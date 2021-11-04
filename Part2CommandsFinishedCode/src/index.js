@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { Client, Intents, Collection} = require("discord.js");
+const { Client, Intents, Collection } = require("discord.js");
 const fs = require("fs");
 
 let setCommands = (client) => {
@@ -13,7 +13,7 @@ let setCommands = (client) => {
     const command = require(`./commands/${file}`);
     client.commands.set(command.data.name, command);
   }
-}
+};
 
 const main = async () => {
   const client = new Client({
@@ -25,40 +25,39 @@ const main = async () => {
   });
   setCommands(client);
   await client.login(process.env.DISCORDTOKEN);
-  console.log(`logged in as ${client.user.tag}`)
+  console.log(`logged in as ${client.user.tag}`);
   await client.user.setActivity({
     type: "LISTENING",
     name: "to IU",
   });
-  
 
-  client.once('ready', async () => {
-    console.log("ready")
+  client.once("ready", async () => {
+    console.log("ready");
   });
 
-  client.on('messageCreate', async (message) => {
+  client.on("messageCreate", async (message) => {
     // 1. console log the message to find out what it is
     console.log(message);
 
-    if(message.author.bot) return;
+    if (message.author.bot) return;
 
     // 2. reply to the command if it says cutie
-    if(message.content.toLowerCase() == "cutie") {
+    if (message.content.toLowerCase() == "cutie") {
       await message.reply("yes, andrei is indeed a cutie :^)");
-      console.log(message.guildId)
+      console.log(message.guildId);
     }
     // 3. create your own command
-      
-    if(message.content.toLowerCase() == 'discrete math')
-      await message.reply(":pensive:")
-  })
-  
-  client.on('interactionCreate', async interaction => {
+
+    if (message.content.toLowerCase() == "discrete math")
+      await message.reply(":pensive:");
+  });
+
+  client.on("interactionCreate", async (interaction) => {
     // 1. use the documentation or console log interaction
-    console.log(interaction)
+    console.log(interaction);
 
     // 2. only reply to the interaction if it's a command
-    if(!interaction.isCommand()) return;
+    if (!interaction.isCommand()) return;
 
     // 3. use your commands collection to find the command
     // 4. if the command doesn't exist do nothing
@@ -76,7 +75,6 @@ const main = async () => {
       });
     }
   });
-}
-
+};
 
 main();

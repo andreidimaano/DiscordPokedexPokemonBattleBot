@@ -11,15 +11,14 @@ const main = async () => {
   });
   await client.login(process.env.DISCORDTOKEN);
 
-  client.once('ready', async () => {
-    console.log(`logged in as ${client.user.tag}`)
+  client.once("ready", async () => {
+    console.log(`logged in as ${client.user.tag}`);
 
     await client.user.setActivity({
       type: "LISTENING",
       name: "to IU",
     });
   });
-
-}
+};
 
 main();

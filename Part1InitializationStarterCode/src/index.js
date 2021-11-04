@@ -18,8 +18,6 @@ you should also have a bot in a discord server
 3. Call main
 */
 
-
-
 /*
 in c++, it looks like this:
 

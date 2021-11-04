@@ -14,10 +14,12 @@ let execute = async (interaction) => {
         timestamp: time(new Date()),
       },
     ],
-    ephemeral: false
+    ephemeral: false,
   });
 };
 module.exports = {
-  data: new SlashCommandBuilder().setName("table").setDescription("i'm sorry to hear about you table"),
-  execute: execute
+  data: new SlashCommandBuilder()
+    .setName("table")
+    .setDescription("i'm sorry to hear about you table"),
+  execute: execute,
 };
