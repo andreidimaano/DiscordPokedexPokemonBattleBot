@@ -3,31 +3,34 @@ Welcome to Cutie Hack 2021. Thank you for coming to my workshop for UCR's Cutie 
 
 ![Cutie Hack Logo](https://media.giphy.com/media/l0IpXwyCXikRK9Yl2/giphy.gif) 
 
+## Outline
+1. What software and tools do I need to make a discord bot?
+2. How do I create my first Discord bot?
+3. How do I create my first command for my Discord Bot?
+4. How do I access public databases online using javascript?
+5. How do use a REST API?
+6. How do I create my own REST API?
+
 
 ## Your Project
 
 > ***Prepare for trouble.***
 > 
+> ![Team Rocket](https://media.giphy.com/media/1m2NzgMlMaWFq/giphy.gif)
+> 
 > ***Make it double.***
- 
-![Team Rocket](https://media.giphy.com/media/1m2NzgMlMaWFq/giphy.gif)
 
-In the spirit of togetherness (Cutie Hack's theme), we will be creating a pokedex discord bot. This is a beginner's project that will combine integral programming concepts:
-
-1. Use a REST API to get data
-2. Use documentation to solve problems
-3. Create our own REST API
+In the spirit of togetherness (Cutie Hack's theme), we will be creating a pokemon discord bot.
 
 ![Pokedex](https://twinfinite.net/wp-content/uploads/2021/08/pokedex-switch.jpg)
 ![Pokemon Battle](https://static.wikia.nocookie.net/essentialsdocs/images/7/70/Battle.png/revision/latest?cb=20190219202514)
 
-## Installation
-![NodeJS Image](https://d1q6f0aelx0por.cloudfront.net/product-logos/library-node-logo.png)
-![](https://www.python.org/static/img/python-logo@2x.png)
-
+## What software and tools do I need to make a discord bot?
+<img src="https://d1q6f0aelx0por.cloudfront.net/product-logos/library-node-logo.png" alt="nodejs" style="width:200px;"/>
+<img src="https://www.python.org/static/img/python-logo@2x.png" alt="python" style="width:200px;"/>
 This workshop uses NodeJS and Python.
 
-You can install NodeJS and Python however you want to - Docker, Package Manager (homebrew on mac), or download and install the binary.
+You can install NodeJS and Python however you want to - Docker, Package Manager (homebrew on mac/linux), or download and install the binary.
 
 > [Node JS Binary](https://nodejs.org/en/) 
 > 
@@ -38,6 +41,12 @@ You can install NodeJS and Python however you want to - Docker, Package Manager 
 I also like using yarn over npm as a package manager :). Once you have NodeJS installed run the following command in terminal
 
 > ```npm install --global yarn```
+
+Check that you have everything installed by running the following commands in terminal:
+
+> ```node -v ```
+> 
+> ```python3 --version```
 
 ## Introduction
 
@@ -58,7 +67,15 @@ Other than programming, I really like korean culture. My friends call me a korea
 > >I like JS because I'm a web dev. Also, the DiscordJS library is used more than the Python library. The DiscordJS library also has 100% coverage of the Discord API :) I'm no expert in programming languages but if you take CS181 you'll probably find a better answer.
 
 
-## Register your bot with Discord
+# How do I create my first Discord bot?
+
+Steps:
+1. Register the bot with Discord
+2. Initalize your project on your computer
+3. Follow the Documentation to login your bot
+
+
+## 1. Register your bot with Discord
 Ref: [Documentation](https://discordjs.guide/preparations/setting-up-a-bot-application.html#creating-your-bot)
 1. Open [Discord Dev Portal](https://discord.com/developers/applications)
 2. Click on the "New Application" button.
@@ -70,10 +87,10 @@ Ref: [Documentation](https://discordjs.guide/preparations/setting-up-a-bot-appli
 6. Go to OAuth2 on the left and create your URL by selecting `bot` and `applications.commands`. Hit "Copy" and enter the link in a browser. Follow the instructions to add a bot to your server.
 
 
-## Creating the Project Directory
+## 2. Initialize your project on your computer
 You can either fork this repo and `git clone` your forked repo into your system, or create your own directory.
 
-## Initializing Project
+### Environment setup
 Go into the terminal and type 
 
 ```npm init -y```
@@ -123,7 +140,7 @@ Lastly, add the most important package for this project:
 yarn add discord.js
 ```
 
-## Protecting Tokens
+### How to protect tokens
 Hopefully, you still have your token copied into your system. If not, go back to the Discord Dev Portal and copy your token. In a terminal change directories to your project directory. This will ensure that your files are safe. Create a `.gitignore` file and copy and paste this [code](https://github.com/github/gitignore/blob/master/Node.gitignore) into the file. 
 
 Next, run this command in your terminal:
@@ -138,7 +155,9 @@ for example:
 
 ```DISCORDTOKEN=ODk5MTMyOTMxOTc5NzM5MTY4.YWuUzA.2nkw4e4v9n7l0kog9QgcFOTlLKM```
 
-## Part 1: Initial Files
+## 3. Follow the Documentation to login your bot
+
+Shows up as Part1Initialization/
 
 1. Create an `src/index.js` file.
 2. Create an asynchronous main function in the file
@@ -162,8 +181,6 @@ JavaScript concepts from this documentation:
 What is ```() => {} ```?
 
 3. [Async/Await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) What is async?
-
-
 
 > Extra Credit:
 > Can you use the documentation to set the status of the bot? 
