@@ -26,32 +26,33 @@ const main = async () => {
 
   // message event listener
   client.on("messageCreate", async (message) => {
-    /* 
-      1. console log the message to find out what it is
-      2. reply to the command if it says cutie
-      3. create your own command
+    
+    // 1. console log the message to find out what it is
+    // 1.5 only do something when the message is not from a bot
+    //  2. reply to the command if it says cutie
+    //  3. create your own command
       
-      For Example:
-      if command == 'Discrete Math'
-        reply sad emoji (btw bots can access emojis!)
+    // For Example:
+    // if command == 'Discrete Math'
+    //   reply sad emoji (btw bots can access emojis!)
 
-      if command == 'pickles'
-        reply do not belong on burgers
+    // if command == 'pickles'
+    //   reply do not belong on burgers
 
-      if command == 'amogus'
-        reply sus
-    */
+    // if command == 'amogus'
+    //   reply sus
+    
   });
 
   // interaction event listener
   client.on("interactionCreate", async (interaction) => {
-    /*
-      1. use the documentation or console log interaction
-      2. only reply to the interaction if it's a command
-      3. use your commands collection to find the command
-      4. if the command doesn't exist do nothing
-      5. otherwise execute
-    */
+    
+      // 1. use the documentation or console log interaction
+      // 2. only reply to the interaction if it's a command
+      // 3. use your commands collection to find the command
+      // 4. if the command doesn't exist do nothing
+      // 5. otherwise execute
+    
   });
 };
 

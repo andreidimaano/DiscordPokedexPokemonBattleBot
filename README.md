@@ -204,6 +204,9 @@ We're going to create slash commands. We also want to create an efficient proces
 4. Listen for Interactions in discord channels (slash commands are considered an interaction)
 
 We're going to register our commands on discord
+Run this command in terminal
+
+```yarn add @discordjs/rest discord-api-types```
 
 - [Slash Command Guide](https://discordjs.guide/interactions/registering-slash-commands.html#guild-commands)
 
@@ -229,6 +232,8 @@ Now, we need our bot to reply to an interaction. This is how we reply to slash c
 6. otherwise execute
 
 Finally, we need to run ```node src/register.js``` in terminal to register our commands. Make sure the .env variables are correct.
+
+> Important: if the slash command does not show up, kick you rbot from the server and invite the bot again
 
 > Congrats! You've officially made a discord bot. This is the basics to using a discord bot. They're super simple to make. Feel free to stick around for the next portion where we'll be building a simple pokedex. 
 
