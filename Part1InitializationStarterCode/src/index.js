@@ -10,13 +10,16 @@ package.json
 you should also have a bot in a discord server
 */
 
-/*
-1. Create an asynchronous main function
 
-2. In this main function, go to the documentation and find the starter code, and copy paste it accordingly
+
+
+// 1. Create an asynchronous main function
+
+// 2. In this main function, go to the documentation and find the starter code, and copy paste it accordingly
  
-3. Call main
-*/
+// 3. Call main
+
+// require dotenv
 
 /*
 in c++, it looks like this:
