@@ -162,7 +162,8 @@ Shows up as Part1Initialization/
 1. Create an `src/index.js` file.
 2. Create an asynchronous main function in the file
 3. in this function, we need to initialize the bot and login the bot to discord. Use the documentation to find the code for this. [Intial Code Documentation](https://discordjs.guide/creating-your-bot/#creating-the-main-file). When looking at documentation, don't copy and paste the whole code. Copy and paste in sections because you may not need something in the code.
-4. Call the function at the bottom of the file
+4. Require token from dotenv- [documentation](https://www.npmjs.com/package/dotenv)
+5. Call the function at the bottom of the file
 
 JavaScript concepts from this documentation:
 1. [Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 
